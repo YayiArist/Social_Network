@@ -1,0 +1,111 @@
+.post{
+    margin: 20px 0;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.36); 
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.36);
+}
+
+  
+  .postTop {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .postTopLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .postProfileImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .postUsername {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 20px;
+  }
+  
+  .postDate{
+      font-size: 12px;
+  }
+
+  .postTopRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5em;
+    margin-right: 20px;
+  border-radius: 50px;
+  }
+  .postTopRight:hover{
+    background-color: rgb(236, 233, 233);
+  }
+  .postCenter{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.postText{
+    padding-left: 10px;
+}
+
+.postImgContainer{
+    width: 100%;
+}
+
+
+.postImg{
+    margin-top: 10px;
+    width: 100%;
+   
+}
+
+.postBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  
+}
+
+.postBottomLeft{
+    display: flex;
+    align-items: center; 
+  
+}
+.reactionIcon{
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+
+}
+
+.postReactionsCounter{
+    font-size: 15px;
+    cursor: pointer;
+   
+}
+.postReactionsCounter:hover{
+    text-decoration: underline;
+}
+
+.postCommentText{
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 15px;
+}
+.postCommentText:hover{
+    text-decoration: underline;
+}
