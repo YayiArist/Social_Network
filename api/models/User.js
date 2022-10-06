@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const UserSchema = new mongoose.Schema/* (
+const UserSchema = new mongoose.Schema(
   {
     username: {
       type: String,
@@ -14,6 +14,9 @@ const UserSchema = new mongoose.Schema/* (
       required: true,
       max: 50,
       unique: true,
+    },
+    birthday: {
+      type: String,
     },
     password: {
       type: String,
@@ -58,40 +61,7 @@ const UserSchema = new mongoose.Schema/* (
     },
   },
   { timestamps: true }
-); */
+); 
 
-({
-  lodgingType: { type: String, },
-
-    rooms: { type: Number, default: null },
-    typeOfRoom: { type: String, default: null },
-    bathrooms: { type: Number, },
-    typeOfBathrooms: { type: String,},
-  
-  city: { type: Boolean,  },
-  country: { type: String,  },
-  address: { type: String,  },
-  numOfGuests: { type: Number, },
-  CheckIn: { type: String, },
-  CheckOut: { type: String, },
-  services: 
-    {
-      wifi: { type: String, },
-      ac: { type: String, },
-      tv: { type: Boolean, },
-      security: { type: Boolean, },
-      cleaning: { type: Boolean, },
-      parking: { type: Boolean,},
-      laundry: { type: Boolean,},
-      hotWater: { type: Boolean, },
-      kitchen: { type: Boolean, },
-      pool: { type: Boolean,},
-      dining: { type: Boolean, },
-      pets: { type: Boolean, },
-    },
-  description: { type: String,  },
-  
-  
-})
 
 module.exports = mongoose.model("User", UserSchema);

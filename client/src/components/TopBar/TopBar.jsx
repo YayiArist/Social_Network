@@ -3,9 +3,9 @@ import "./topBar.css";
 import { BiSearchAlt2 } from "react-icons/bi";
 import {
   BsFillPersonFill,
-  BsFillChatSquareTextFill,
   BsBellFill,
 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 export default function TopBar() {
   return (
@@ -41,7 +41,10 @@ export default function TopBar() {
             <span className="topBarIconBadge">1</span>
           </div>
         </div>
+        <Link to= "/profile">
         <img src="assets/person/yo.jpeg" alt="" className="topBarImg" />
+        </Link>
+
       </div>
     </div>
   );

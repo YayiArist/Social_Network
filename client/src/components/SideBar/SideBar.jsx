@@ -2,11 +2,13 @@ import React from "react";
 import "./sideBar.css";
 import { MdRssFeed } from "react-icons/md";
 import { HiChatAlt} from "react-icons/hi";
-import { BsPlayBtnFill, BsBookmarkHeartFill, BsQuestionCircleFill, BsBriefcase } from "react-icons/bs";
+import { BsPlayBtnFill, BsQuestionCircleFill, BsBriefcase } from "react-icons/bs";
 import { ImUsers } from "react-icons/im";
 import { RiCalendarEventFill } from "react-icons/ri";
 import { BiJoystick } from "react-icons/bi";
 import { FaGraduationCap } from "react-icons/fa"
+import {Users} from "../../exData"
+import Friend from "../Friend/Friend";
 
 export default function SideBar() {
   return (
@@ -53,58 +55,8 @@ export default function SideBar() {
         <button className="sideBarButton">See More</button>
         <hr className="sideBarHr"/>
         <ul className="sideBarFriendList">
-          <li className="sidebarFiend">
-            <img className="sideBarFriendImg" src="/assets/person/2.jpeg" alt=""/>
-            <span className="sideBarFriendName">Amigo 1</span>
-          </li>
-          <li className="sidebarFiend">
-            <img className="sideBarFriendImg" src="/assets/person/2.jpeg" alt=""/>
-            <span className="sideBarFriendName">Amigo 1</span>
-          </li>
-          <li className="sidebarFiend">
-            <img className="sideBarFriendImg" src="/assets/person/2.jpeg" alt=""/>
-            <span className="sideBarFriendName">Amigo 1</span>
-          </li>
-          <li className="sidebarFiend">
-            <img className="sideBarFriendImg" src="/assets/person/2.jpeg" alt=""/>
-            <span className="sideBarFriendName">Amigo 1</span>
-          </li>
-          <li className="sidebarFiend">
-            <img className="sideBarFriendImg" src="/assets/person/2.jpeg" alt=""/>
-            <span className="sideBarFriendName">Amigo 1</span>
-          </li>
-          <li className="sidebarFiend">
-            <img className="sideBarFriendImg" src="/assets/person/2.jpeg" alt=""/>
-            <span className="sideBarFriendName">Amigo 1</span>
-          </li>
-          <li className="sidebarFiend">
-            <img className="sideBarFriendImg" src="/assets/person/2.jpeg" alt=""/>
-            <span className="sideBarFriendName">Amigo 1</span>
-          </li>
-          <li className="sidebarFiend">
-            <img className="sideBarFriendImg" src="/assets/person/2.jpeg" alt=""/>
-            <span className="sideBarFriendName">Amigo 1</span>
-          </li>
-          <li className="sidebarFiend">
-            <img className="sideBarFriendImg" src="/assets/person/2.jpeg" alt=""/>
-            <span className="sideBarFriendName">Amigo 1</span>
-          </li>
-          <li className="sidebarFiend">
-            <img className="sideBarFriendImg" src="/assets/person/2.jpeg" alt=""/>
-            <span className="sideBarFriendName">Amigo 1</span>
-          </li>
-          <li className="sidebarFiend">
-            <img className="sideBarFriendImg" src="/assets/person/2.jpeg" alt=""/>
-            <span className="sideBarFriendName">Amigo 1</span>
-          </li>
-          <li className="sidebarFiend">
-            <img className="sideBarFriendImg" src="/assets/person/2.jpeg" alt=""/>
-            <span className="sideBarFriendName">Amigo 1</span>
-          </li>
-          <li className="sidebarFiend">
-            <img className="sideBarFriendImg" src="/assets/person/2.jpeg" alt=""/>
-            <span className="sideBarFriendName">Amigo 1</span>
-          </li>
+          {Users.map(u=>(<Friend key= {u.id}user={u}/>))}
+          
         </ul>
       </div>
     </div>
