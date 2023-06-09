@@ -8,17 +8,17 @@ const bcrypt = require ("bcrypt");
     
     //generar nuevo pass
     try{
-        /* const salt = await bcrypt.genSalt(10);
-        const hashedPassword = await bcrypt.hash(req.body.password, salt); */
+          const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(req.body.password, salt);  
+
+        
 
         //crear nuevo usuario
         const newUser = new User({
-            city: req.body.city,
-            country: req.body.country,
-            services: req.body.services.wifi,
-          
-    
-        });
+            username: req.body.username,
+            email: req.body.email,
+            password: hashedPassword,
+          });
         // guardar usuario  y respuesta
         const user = await newUser.save()
         res.status(200).json(user)
@@ -44,7 +44,7 @@ router.post("/login", async(req, res)=>{
        
        res.status(500).json(err)
 
-    }
+    } 
     
 
 
